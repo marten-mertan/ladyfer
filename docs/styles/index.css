@@ -1550,7 +1550,7 @@ a {
       border-bottom: 1px solid #31332d; }
       @media screen and (max-width: 1140px) {
         .compose-table-row {
-          width: 720px; } }
+          width: 830px; } }
     .compose-table__name {
       border-right: 1px solid #f6f7fb;
       padding: 9px 14px;
@@ -2688,7 +2688,7 @@ a {
     font-size: 20px;
     font-family: "FuturaRoundBold";
     color: #474747;
-    line-height: 1;
+    line-height: 26px;
     text-shadow: 0px 3px 43px rgba(0, 0, 0, 0.11); }
   .main__text {
     font-size: 15px;
@@ -2759,6 +2759,30 @@ a {
     height: 75px;
     background: url(../assets/img/with-cup.png) 50% 50% no-repeat;
     background-size: cover; }
+    @media screen and (max-width: 1140px) {
+      .main-with-cup {
+        display: block;
+        width: 59px;
+        height: 60px;
+        background: url(../assets/img/compose-child-decor-4-mobile.png) 50% 50% no-repeat;
+        background-size: cover;
+        margin: 10px 0 0; } }
+  .main-instruction-decor {
+    position: absolute;
+    width: 101px;
+    height: 193px;
+    top: -11px;
+    right: 0px;
+    background: url(../assets/img/instruction-ladyfer-mobile.png) 50% 50% no-repeat;
+    background-size: cover; }
+    @media screen and (max-width: 450px) {
+      .main-instruction-decor {
+        left: 205px; } }
+    .main-instruction-decor.mod-mobile {
+      display: none; }
+      @media screen and (max-width: 1140px) {
+        .main-instruction-decor.mod-mobile {
+          display: block; } }
 
 .mfp-wrap {
   top: 0;
@@ -2878,24 +2902,49 @@ a {
     width: 100%; }
     .popup-form-row {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      align-items: flex-end; }
       @media screen and (max-width: 640px) {
         .popup-form-row {
-          flex-direction: column; } }
+          flex-direction: column;
+          align-items: flex-start; } }
     .popup-form-multi {
       display: flex;
       flex-direction: row;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      background-color: transparent;
+      border: 2px solid transparent; }
+      .popup-form-multi.mod-error {
+        background-color: #e74c6d;
+        border-color: #e74c6d;
+        border-radius: 6px;
+        transition: all .3s ease; }
+        .popup-form-multi.mod-error .popup-form-input__text {
+          display: none; }
+          .popup-form-multi.mod-error .popup-form-input__text--error {
+            display: inline-block; }
     .popup-form__input {
       flex: 1 1 auto;
       width: 100%;
-      margin-bottom: 28px; }
+      margin-bottom: 28px;
+      background-color: transparent;
+      border: 2px solid transparent; }
+      .popup-form__input.mod-error {
+        background-color: #ec2152;
+        border-color: #ec2152;
+        border-radius: 6px;
+        transition: all .3s ease; }
+        .popup-form__input.mod-error .popup-form-input__text {
+          display: none; }
+          .popup-form__input.mod-error .popup-form-input__text--error {
+            display: inline-block; }
       @media screen and (max-width: 640px) {
         .popup-form__input {
           margin-bottom: 10px; } }
       .popup-form__input:not(:last-child) {
         margin-right: 20px; }
       .popup-form__input input {
+        vertical-align: top;
         border: 1px solid #ededed;
         border-radius: 5px;
         background: #fbfbfb;
@@ -2913,6 +2962,7 @@ a {
         width: 100%;
         transition: all 0.4s ease; }
       .popup-form__input textarea {
+        vertical-align: top;
         border: 1px solid #ededed;
         border-radius: 5px;
         background: #fbfbfb;
@@ -2940,6 +2990,16 @@ a {
       @media screen and (max-width: 640px) {
         .popup-form-input__text {
           display: none; } }
+      .popup-form-input__text--error {
+        display: none;
+        padding: 4px 8px 5px;
+        font-size: 12px;
+        font-family: "Roboto";
+        font-weight: 300;
+        line-height: 1.2;
+        color: #fff;
+        text-shadow: 0px 3px 43px rgba(0, 0, 0, 0.11);
+        transition: all .3s ease; }
     .popup-form__checkbox {
       display: block;
       font-size: 16px;
@@ -3026,6 +3086,11 @@ a {
 
 .adult-instruction .main-head {
   background-image: url("../assets/img/compose-woman-instruction.jpg"); }
+  @media screen and (max-width: 1140px) {
+    .adult-instruction .main-head {
+      background: #ecf2f2 url(../assets/img/woman-back-mobile.png) -5% 150px no-repeat;
+      background-size: auto;
+      padding: 32px 12px 30px; } }
 
 .adult-instruction .main-head-content {
   padding-left: 320px; }
@@ -3033,8 +3098,46 @@ a {
     .adult-instruction .main-head-content {
       padding: 0; } }
 
+@media screen and (max-width: 1140px) {
+  .adult-instruction .main__text.mod-tradename {
+    margin-bottom: 0; } }
+
+@media screen and (max-width: 1140px) {
+  .adult-instruction .main__text.mod-composition {
+    font-size: 15px;
+    line-height: 18px;
+    margin-left: 96px; } }
+
+@media screen and (max-width: 450px) {
+  .adult-instruction .main__text.mod-composition {
+    min-height: 265px;
+    margin-left: 80px; } }
+
+@media screen and (max-width: 1140px) {
+  .adult-instruction .main__text.mod-composition .main__subtitle {
+    font-size: 15px;
+    line-height: 18px; } }
+
 .adult-instruction .main__title {
   margin-bottom: 30px; }
+  @media screen and (max-width: 1140px) {
+    .adult-instruction .main__title {
+      font-size: 30px;
+      margin-bottom: 20px; } }
+
+.adult-instruction .compose-icons {
+  position: relative; }
+  @media screen and (max-width: 1140px) {
+    .adult-instruction .compose-icons-item {
+      margin-left: 96px; } }
+  @media screen and (max-width: 450px) {
+    .adult-instruction .compose-icons-item {
+      margin-left: 0px; } }
+  @media screen and (max-width: 1140px) {
+    .adult-instruction .compose-icons-item__text {
+      font-size: 15px;
+      line-height: 16px;
+      max-width: 124px; } }
 
 .adult-instruction .compose-woman__text {
   width: 100%;
@@ -3042,6 +3145,10 @@ a {
 
 .children-instruction .main__title {
   margin-bottom: 30px; }
+  @media screen and (max-width: 1140px) {
+    .children-instruction .main__title {
+      font-size: 30px;
+      margin-bottom: 20px; } }
 
 .children-instruction .main-head-content {
   padding-bottom: 40px; }
@@ -3050,12 +3157,42 @@ a {
       padding: 0; } }
   .children-instruction .main-head-content .main__text {
     max-width: 622px; }
+    @media screen and (max-width: 1140px) {
+      .children-instruction .main-head-content .main__text.mod-tradename {
+        margin-bottom: 4px; } }
+    @media screen and (max-width: 1140px) {
+      .children-instruction .main-head-content .main__text.mod-composition {
+        font-size: 15px;
+        line-height: 18px;
+        margin-right: 80px; } }
+    @media screen and (max-width: 1140px) {
+      .children-instruction .main-head-content .main__text.mod-composition .main__subtitle {
+        font-size: 15px;
+        line-height: 18px; } }
 
 .children-instruction .compose-icons {
+  position: relative;
   width: 622px; }
   @media screen and (max-width: 1140px) {
     .children-instruction .compose-icons {
       width: 100%; } }
+  @media screen and (max-width: 1140px) {
+    .children-instruction .compose-icons-item__text {
+      font-size: 15px;
+      line-height: 16px;
+      max-width: 124px; } }
+
+.children-instruction .main-instruction-decor {
+  position: absolute;
+  width: 106px;
+  height: 218px;
+  top: 27px;
+  left: 240px;
+  background: url(../assets/img/instruction-babyfer-mobile.png) 50% 50% no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 450px) {
+    .children-instruction .main-instruction-decor {
+      left: 197px; } }
 
 .children-instruction .compose-table {
   width: 622px; }
@@ -3079,4 +3216,28 @@ a {
   background-size: cover; }
   @media screen and (max-width: 1140px) {
     .children-instruction .main-head {
-      background: none; } }
+      background: #ecf2f2 url(../assets/img/child-back-mobile.png) 100% 146px no-repeat;
+      background-size: auto;
+      padding: 32px 12px 30px; } }
+
+@media screen and (max-width: 640px) {
+  .popup-form-message .mfp-content {
+    height: auto; } }
+
+@media screen and (max-width: 640px) {
+  .popup-form-message .popup {
+    border-radius: 10px; } }
+
+.popup-form-message .popup-body {
+  padding: 70px 15px; }
+
+.popup-form-message .popup__close {
+  border-color: #14344d;
+  color: #14344d; }
+
+.popup-form-message .popup__text {
+  font-size: 25px;
+  font-family: "FuturaRound";
+  color: #14344d;
+  line-height: 1.2;
+  text-align: center; }
