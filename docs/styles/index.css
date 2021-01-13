@@ -1100,20 +1100,21 @@ a {
             left: 21px; } }
       .compose-child-features-decor-4 {
         position: absolute;
-        top: 152px;
-        left: 500px;
-        width: 112px;
-        height: 88px;
+        top: 148px;
+        left: 452px;
+        width: 216px;
+        height: 98px;
         background: url(../assets/img/compose-child-decor-4.png) 50% 50% no-repeat;
         background-size: cover; }
+        @media screen and (max-width: 900px) {
+          .compose-child-features-decor-4 {
+            left: 402px; } }
         @media screen and (max-width: 800px) {
           .compose-child-features-decor-4 {
-            width: 59px;
-            height: 60px;
+            width: 117px;
+            height: 53px;
             top: 90px;
-            left: 213px;
-            background: url(../assets/img/compose-child-decor-4-mobile.png) 50% 50% no-repeat;
-            background-size: cover; } }
+            left: 170px; } }
       .compose-child-features-decor-5 {
         position: absolute;
         top: 295px;
@@ -2301,12 +2302,10 @@ a {
     @media screen and (max-width: 1140px) {
       .buy-cols.for-children .buy-decor__img-1 {
         top: 0;
-        left: 150px;
         z-index: 1; } }
     @media screen and (max-width: 1140px) {
       .buy-cols.for-children .buy-decor__img-2 {
         top: 34px;
-        left: 50px;
         z-index: 2; } }
     @media screen and (max-width: 1140px) {
       .buy-cols.for-children .buy-decor__text-2 {
@@ -2606,8 +2605,8 @@ a {
   z-index: 11;
   width: 74px;
   height: 74px;
-  bottom: 130px;
-  right: 80px;
+  bottom: 70px;
+  right: 24px;
   overflow: hidden;
   white-space: nowrap;
   visibility: hidden;
