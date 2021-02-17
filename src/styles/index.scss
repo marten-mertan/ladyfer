@@ -954,9 +954,17 @@ a{
             right: 0px;
             width: 241px;
             height: 422px;
+            opacity: 1;
+            visibility: visible;
             background: url(../assets/img/compose-woman-ladyfer.png) 50% 50% no-repeat;
             background-size: cover;
+            transition: all .2s ease;
+            @media screen and (max-width: 1340px){
+                opacity: 0;
+                visibility: hidden;
+            }
             @media screen and (max-width: 1140px){
+                display: none;
                 position: relative;
                 top: 0;
                 left: 0;
@@ -1090,7 +1098,7 @@ a{
             height: 700px;
             @media screen and (max-width: 800px){
                 width: 100%;
-                height: 430px;
+                height: 152px;
             }
             &-decor-1{
                 position: absolute;
@@ -1164,6 +1172,14 @@ a{
                 height: 417px;
                 background: url(../assets/img/compose-child-babyfer.png) 50% 50% no-repeat;
                 background-size: cover;
+                opacity: 1;
+                visibility: visible;
+                transition: all .2s ease;
+                @media screen and (max-width: 1340px){
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
                 @media screen and (max-width: 800px){
                     width: 138px;
                     height: 268px;
@@ -3501,8 +3517,13 @@ a{
 .adult-instruction{
     .main-head{
         background-image: url('../assets/img/compose-woman-instruction.jpg');
+        transition: all .2s ease;
+        @media screen and (max-width: 1340px){
+            background: url(../assets/img/compose-woman-instruction-laptop.jpg) 50% 50% no-repeat;
+            background-size: cover;
+        }
         @media screen and (max-width: 1140px){
-            background: #ecf2f2 url(../assets/img/woman-back-mobile.png) -5% 150px no-repeat;
+            background: #ecf2f2 url(../assets/img/woman-back-mobile.png) 0 150px no-repeat;
             background-size: auto;
             padding: 32px 12px 30px;
         }
@@ -3663,6 +3684,11 @@ a{
     .main-head {
         background: url(../assets/img/compose-child-instruction.jpg) 50% 50% no-repeat;
         background-size: cover;
+        transition: all .2s ease;
+        @media screen and (max-width: 1340px){
+            background: url(../assets/img/compose-child-instruction-laptop.jpg) 50% 50% no-repeat;
+            background-size: cover;
+        }
         @media screen and (max-width: 1140px){
             background: #ecf2f2 url(../assets/img/child-back-mobile.png) 100% 146px no-repeat;
             background-size: auto;
