@@ -853,13 +853,22 @@ a {
         background-size: auto; } }
     @media screen and (max-width: 1140px) {
       .compose-woman .compose-tabs {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding-top: 20px; } }
+    @media screen and (max-width: 1140px) {
+      .compose-woman .compose-tabs-col {
+        width: 100%;
+        justify-content: center; } }
+    @media screen and (max-width: 1140px) {
+      .compose-woman .compose-tabs-col:first-child {
+        justify-content: center;
+        margin-right: 0; } }
     .compose-woman .compose-tabs__link {
       color: #7e7e7e; }
       @media screen and (max-width: 1140px) {
         .compose-woman .compose-tabs__link {
+          display: block;
           width: auto;
           font-size: 20px;
           -webkit-text-decoration-color: #dcdcdc;
@@ -1020,6 +1029,14 @@ a {
         flex-direction: column;
         align-items: center;
         padding-top: 20px; } }
+    @media screen and (max-width: 1140px) {
+      .compose-child .compose-tabs-col {
+        width: 100%;
+        justify-content: center; } }
+    @media screen and (max-width: 1140px) {
+      .compose-child .compose-tabs-col:first-child {
+        justify-content: center;
+        margin-right: 0; } }
     .compose-child .compose-tabs__link {
       color: #7e7e7e; }
       @media screen and (max-width: 1140px) {
@@ -1258,9 +1275,22 @@ a {
     flex-direction: row;
     justify-content: center;
     margin-bottom: 30px; }
+    .compose-tabs-col {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 50%; }
+      @media screen and (max-width: 1140px) {
+        .compose-tabs-col {
+          width: calc(50% - 15px); } }
+      .compose-tabs-col:first-child {
+        justify-content: flex-end; }
+        @media screen and (max-width: 1140px) {
+          .compose-tabs-col:first-child {
+            margin-right: 30px; } }
     .compose-tabs__link {
       position: relative;
-      display: block;
+      display: inline-block;
       padding: 18px 32px 18px 28px;
       font-size: 25px;
       font-family: "FuturaRound";
@@ -1269,8 +1299,7 @@ a {
       text-shadow: 0px 3px 43px rgba(0, 0, 0, 0.11); }
       @media screen and (max-width: 1140px) {
         .compose-tabs__link {
-          padding: 18px 0 18px;
-          width: 50%;
+          padding: 18px 10px 18px;
           text-decoration: underline;
           -webkit-text-decoration-style: dashed;
                   text-decoration-style: dashed;
@@ -1726,7 +1755,9 @@ a {
           padding: 15px 20px 17px;
           margin-bottom: 10px; } }
   .heir-list {
-    text-align: center; }
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
     .heir-list__item {
       display: inline-block;
       position: relative;
@@ -1736,7 +1767,8 @@ a {
       color: #fff;
       line-height: 23px;
       text-shadow: 0px 3px 43px rgba(0, 0, 0, 0.11);
-      margin-bottom: 4px; }
+      margin-bottom: 4px;
+      text-align: center; }
       @media screen and (max-width: 1140px) {
         .heir-list__item {
           font-size: 15px;
